@@ -1,0 +1,819 @@
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+#splash-screen{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+
+}
+
+#splash-screen p {
+    font-family: fantasy;
+    font-size: 50px;
+    color: #32CD32;
+}
+
+#main-screen {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+    font-family: "Consolas";
+    text-align: center;
+    padding-bottom: 5px;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+	width: 100%;
+}
+
+
+
+#middle{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align:center;
+}
+
+#screen {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+#title {
+    color: #32CD32;
+    font-family: "Consolas";
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    display: block;
+}
+#online-connection {
+    color: #fff;
+    font-family: "Consolas";
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: block;
+}
+#mode-selection-container {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+.mode-select {
+    width: 210px;
+    height: 210px;
+    border: 15px solid black;
+    border-radius: 50%;
+	top: 40%;
+	display: inline-block;
+    font-family: Consolas;
+    font-weight: bolder;
+    font-size: 120%;
+}
+#mode-1 {
+    background: dodgerblue;
+	}
+#mode-2 {
+    background: red;
+	}
+#mode-3 {
+    background: yellow;
+}
+
+.mode-select:hover {
+    transform:scale(1.05,1.05);
+}
+
+.nongameplay-buttons-no-hover {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+}
+
+.nongameplay-buttons {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+}
+
+.confirm-buttons {
+    background-color: black;
+    border: none;
+    display: inline-block;
+    position: absolute;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+#no-button, #popup-no-button {
+    right: 50px;
+}
+
+#yes-button,#popup-yes-button, #submit-login-button, #submit-signup-button {
+    left: 50px;
+}
+
+#popup-no-button, #close-login-button, #close-signup-button {
+    right: 50px;
+    display:none;
+}
+
+#popup-yes-button {
+    left: 50px;
+    display:none;
+}
+
+#popup-accept-button {
+    display:none;
+    left: 50%;
+    margin-left: -45px;
+}
+
+#popup-login {
+    display:none;
+}
+
+#popup-signup {
+    display: none;
+}
+
+
+.nongameplay-buttons:hover, .confirm-buttons:hover {
+    transform:scale(1.2,1.2);
+}
+#left-arrow-button {
+    bottom: 30%;
+    left: 15%;
+}
+#right-arrow-button {
+    bottom: 30%;
+    right: 15%;
+}
+#options-button, #tutorial-return-button, #tutorial1-return-button, #tutorial2-return-button,
+#tutorial3-return-button, #game-over-quit-button, #quit-button {
+    left: 5px;
+}
+#scores-button, #restart-button, #game-over-leaderboard-button {
+    left: 70px;
+}
+#credits-button, #pause-button, #to-tutorial2-button, #game-over-restart-button, #unpause-button {
+    right: 5px;
+}
+#return-button {
+    display: none;
+}
+#badges-button {
+    display:none;
+    right: 5px;
+}
+
+#tutorial-button {
+    right: 75px;
+    bottom: 9px;
+}
+
+#options-screen {
+    display: none;
+}
+.T_container {
+    margin-top: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 305px;
+}
+
+.O_container {
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 305px;
+}
+
+.option-header {
+    float: left;
+    padding-right: 50px;
+}
+
+.buttonbox {
+    text-align:center;
+}
+
+#option-5, #option-6, #option-7 {
+    border: 3px solid white;
+    background-color:black;
+    font-family: Consolas;
+    color: white;
+    font-size: 120%;
+    margin: 10px
+}
+#option-5:hover, #option-6:hover, #option-7:hover {
+
+    transform:scale(1.1,1.1);
+ }
+
+/* style for option buttons -- adapted from http://cssdeck.com/labs/css-checkbox-styles */
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+.checkbox {
+    width: 28px;
+    height: 28px;
+    background: #fcfff4;
+
+    background: white;
+    margin: 20px 0 20px 250px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+    position: relative;
+}
+
+.checkbox label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    left: 4px;
+    top: 4px;
+    background: black;
+}
+
+.checkbox label:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #32CD32;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    top: 2px;
+    left: 2px;
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+    background-color: #32CD32;
+    opacity: 1;
+}
+
+/* end for option buttons */
+
+#scores-screen {
+    display:none;
+	height: 100%;
+	width: 100%;
+}
+#badges-screen {
+    display:none;
+}
+.badge-icons {
+    margin: 40px auto 0 auto;
+    padding: 10px;
+	position: absolute;
+	width: 270px;
+	margin-top: 120px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.badge-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+	width: 50px;
+	height: 50px;
+}
+#badge-desc {
+	position: absolute;
+	width: 270px;
+}
+#credits-screen {
+    display:none;
+}
+#game-screen {
+    display:none;
+}
+#lives-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#lives-bar img {
+    width:35px;
+    height:30px;
+}
+#timer-bar {
+    float: right;
+    background-color: #32CD32;
+    width: 40%;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+	max-width: 200px;
+}
+#timer-bar p {
+    font-size: 150%;
+    color: black;
+}
+#score-bar {
+    position: absolute;
+    bottom: 5px;
+    margin-left: 10px;
+    background-color: #32CD32;
+    width: 50%;
+    height: 45px;
+    text-align: center;
+	max-width: 200px;
+}
+#score-bar p {
+    color: black;
+    font-size: 220%;
+}
+#dot-container {
+    width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -210px;
+}
+#steve-button {
+    background-color: transparent;
+    border: none;
+}
+
+#gameover-screen {
+    display: none;
+}
+
+#gameover-screen h1, #pause-screen h1{
+    margin-top: 0;
+    font-size: 400%;
+    color: #32CD32;
+}
+
+#pause-screen {
+    display: none;
+}
+
+#tutorial1-screen {
+    display:none;
+}
+
+#tutorial2-screen {
+    display:none;
+}
+
+#tutorial3-screen {
+    display:none;
+}
+
+#tutorial4-screen {
+    display:none;
+}
+
+.tutorial-gif {
+    display: block;
+    margin: 0 auto;
+    height: 80%;
+}
+
+#pause-screen h1 {
+    font-size: 500%;
+    color: #32CD32;
+}
+
+#confirmation-container {
+    width: 35%;
+    padding-bottom: 100px;
+    margin: auto;
+    display:none;
+    position: relative;
+    border: 4px solid white;
+    border-radius: 4px;
+}
+
+#final-score-container, #badge-message-container, #highscore-message-container, #name-input-container {
+    border-radius: 4px;
+    border: 3px solid white;
+    margin: 10px auto;
+    width: 40%;
+}
+
+
+#badge-message-container, #highscore-message-container, #name-input-container {
+    display:none;
+}
+
+#badge-img-container img {
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+    padding: 4px;
+}
+
+#badge-img-container {
+    text-align:center;
+}
+
+p {
+    color: white;
+    font-family: "Consolas";
+    margin: 0;
+    font-size: 75%;
+}
+#credits-container {
+    text-align: center;
+	width: 100%;
+	height: 100%;
+	margin-top: 0;
+}
+#credits-container p {
+    margin: -6px;
+}
+h2 {
+    color: white;
+    text-align: center;
+    font-family: "Consolas";
+    margin: 0;
+}
+
+h3 {
+    color: white;
+    text-align: left;
+    font-family: "Consolas";
+    margin: 0 0 0 10%;
+    float: left;
+}
+
+h4 {
+	color: white;
+    text-align: center;
+    font-family: "Consolas";
+    margin: 0 0 0 10%;
+    float: left;
+}
+.username-display{
+	color: white;
+    text-align: center;
+    font-family: "Consolas";
+    margin: 0 0 0 10%;
+    float: left;
+}
+
+
+
+table {
+    color: white;
+    font-family: "Consolas";
+    font-size: 130%;
+}
+
+div#preload { display: none; }
+
+/*
+Game playing field: dots 
+*/
+div.dot {
+    width: 52px;
+    height: 52px;
+
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    background: blue;
+    border-radius: 25px;
+
+    margin-top: 10%;
+    margin-left:15%;
+
+}
+div.dot.selected {
+    background: lightgoldenrodyellow;
+    box-shadow: 0 0 15px lightgoldenrodyellow;
+}
+.gamegrid{
+    background-color:#000;
+    width: 240px;
+    height: 320px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    overflow:hidden;
+}
+div.dot.blue {
+    background: dodgerblue;
+}
+div.dot.cyan {
+    background: cyan;
+}
+div.dot.green {
+    background: limegreen;
+}
+div.dot.orange {
+    background: orange;
+}
+div.dot.purple {
+    background: purple;
+}
+div.dot.magenta {
+    background: magenta;
+}
+div.dot.pink {
+    background: hotpink;
+}
+div.dot.black{
+    background: black;
+}
+div.dot.fade{
+    opacity: 0.5;
+}
+
+div.dot.steve-glow {
+    background: lightgoldenrodyellow;
+    box-shadow: 0 0 15px lightgoldenrodyellow;
+}
+div.dot.steve{
+    background-image: url("../images/steve.png");
+	width: 50px; /* TMP, resize image to 52x52 then remove */
+	height: 50px; /* TMP, resize image to 52x52 then remove */
+}
+div.dot.tapped_steve{
+    background-image: url("../images/madsteve.png");
+    background-color: lightgoldenrodyellow;
+	width: 50px; /* TMP, resize image to 52x52 then remove */
+	height: 50px; /* TMP, resize image to 52x52 then remove */
+}
+div.dot.correct {
+    background: green;
+}
+div.dot.incorrect {
+    background: red;
+}
+div.dot.wrong_dot {
+    background-image: url("../images/cross.png");
+}
+div.dot.good_dot {
+    background-image: url("../images/checkmark.png");
+}
+.dotcont {
+    max-width: 75px;
+    padding-right: 5px;
+    margin: 10px 15px;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+#local-scores p {
+	margin: auto;
+	font-size: 200%;
+	text-align: center;
+}
+
+#score-tab {
+    position: absolute;
+    margin-left: -95px;
+    margin-top: -40px;
+    left: 50%;
+    background-color: black;
+
+    border-style: solid;
+    border-color: #fff;
+	font-size: 2em;
+}
+
+#online-scores {
+	border-style: solid;
+	border-color: #fff;
+	margin: auto;
+	width: 95%;
+	max-width: 1000px;
+	overflow-y: scroll;
+	max-height: 60%;
+	height: 400px;
+}
+
+#online-scores p {
+	text-align: justify;
+	font-size: 1.2em;
+	
+}
+
+.L_container {
+    margin-top: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
+/*Leaderboard tab buttons; borrowed from StackOverflow */
+.cb-enable, .cb-disable, .cb-enable span, .cb-disable span { 
+	display: block; float: left; 
+}
+
+.cb-enable span, .cb-disable span { 
+	line-height: 30px; 
+	display: block; 
+	background-repeat: no-repeat; 
+	font-weight: bold; 
+}
+
+.cb-enable span { 
+	background-position: left -90px; 
+	padding: 0 10px; 
+}
+
+.cb-disable span { 
+	background-position: right -180px;
+	padding: 0 10px; 
+}
+.cb-disable.selected { 
+	background-position: 0 -30px; 
+}
+.cb-disable.selected span { 
+	background-position: right -210px; 
+	color: #000; 
+	background-color: #fff; 
+}
+.cb-enable.selected { 
+	background-position: 0 -60px; 
+}
+.cb-enable.selected span { 
+	background-position: left -150px; 
+	color: #000; 
+	background-color: #fff; 
+}
+.switch label { 
+	cursor: pointer; 
+}
+.switch input { 
+	display: none; 
+}
+.custom-offset {
+    margin-left: 2.33333%;
+}
+
+/*Put in its proper place later*/
+#online-score-container {
+	margin: auto;
+	width: 400px;
+	max-width: 80%;
+}
+
+#overlay-popup {
+    display:none;
+    position: fixed;
+    padding: 10px;
+    width: 350px;
+    left: 50%;
+    margin-left: -175px;
+    padding-bottom: 100px;
+    top: 50%;
+    margin-top: -150px;
+    z-index: 20;
+}
+
+#overlay-popup:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: -2;
+}
+
+#overlay-popup:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    border: 4px solid white;
+    border-radius: 4px;
+    z-index: -1;
+}
+
+.text-input {
+    margin: auto;
+}
+
+input[type=text], input[type=password] {
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    border: 2px solid #32CD32;
+}
+
+@media screen and (max-width: 640px) {
+    #confirmation-container {
+        width: 80%;
+        height: 30%;
+        margin: auto;
+        display: none;
+        position: relative;
+        border: 4px solid white;
+        border-radius: 4px;
+    }
+
+    #score-bar {
+        position: absolute;
+        bottom: 5px;
+        margin-left: 10px;
+        background-color: #32CD32;
+        width: 40%;
+        height: 45px;
+        text-align: center;
+        max-width: 150px;
+    }
+
+    #score-bar p {
+        color: black;
+        font-size: 200%;
+    }
+
+
+    #option-6-box, #option-6-label {
+        display:none;
+    }
+
+    #gameover-screen h1, #pause-screen h1{
+        margin-top: 10px;
+        font-size: 300%;
+        color: #32CD32;
+    }
+
+    #final-score-container, #badge-message-container, #highscore-message-container {
+        border-radius: 4px;
+        border: 3px solid white;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+
+    #overlay-popup {
+        display:none;
+        position: fixed;
+        padding: 10px;
+        width: 250px;
+        left: 50%;
+        margin-left: -125px;
+        height: 250px;
+        top: 50%;
+        margin-top: -150px;
+        z-index: 20;
+    }
+
+
+}
