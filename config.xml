@@ -6,11 +6,11 @@
 <!-- widget for phoneGap -->
 <widget 	xmlns 		= "http://www.w3.org.ns/widgets"
 			xmlns:gap 	= "http://phonegap.com/ns/1.0"
-			id			= "com.BCIT4900.soccer pro-file"
+			id			= "com.BCIT4900.DOTDASH"
 			versionCode	= "1"
 			version		= "1.0.0" >
 			
-  <name>Soccer Pro-File</name>
+  <name>DOT-DASH</name>
   
   <description>
         Soccer profile description
